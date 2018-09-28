@@ -1,0 +1,18 @@
+@import "../../../scss/inc/variables";
+
+.menu {
+  background-color: red;
+  &_item {
+    display: inline-block;
+  }
+  &_link {
+    display: inline-block;
+    padding: 5px;
+    color: $color-white;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: lighten($color-red, 30%);
+    }
+  }
+}
