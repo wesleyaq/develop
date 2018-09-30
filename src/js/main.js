@@ -1,4 +1,4 @@
-import "@babel/polyfill";
+// import "@babel/polyfill";
 import '../scss/main.scss';
 import Users from './com/Users/Users';
 import Menu from './com/Menu';
@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", function() {
     menu.render('menu');
 
     const users = new Users();
-    users.listRender('users');
+    users.render('users');
 });

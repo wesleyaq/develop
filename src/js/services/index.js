@@ -1,7 +1,9 @@
 // import CONFIG from '../config';
-import 'whatwg-fetch';
-const BaseURL = 'http://jsonplaceholder.typicode.com/';
+import 'whatwg-fetch'
+import 'promise-polyfill/src/polyfill';
 
+const BaseURL = 'http://jsonplaceholder.typicode.com/';
+// let fetch = (typeof fetch === 'function'? fetch: pFetch);
 // let fetchAsync = async (url) => await (await fetch(url)).json();
 
 /*async function fetchAsync(url) {
@@ -24,7 +26,6 @@ const BaseURL = 'http://jsonplaceholder.typicode.com/';
 }*/
 
 function cFetch(url, opts = { method: 'GET' }) {
-    console.log(typeof fetch, typeof Promise);
     return new Promise((resolve, reject) => {
         fetch(url, opts)
         .then((resp) => resp.json())
@@ -37,7 +38,12 @@ function cFetch(url, opts = { method: 'GET' }) {
     return await fetchAsync(`${BaseURL}${serv}`);
 }; */
 
-export function Get(serv) {
+export function Get(serv, callback) {
+    /* fetch(`${BaseURL}${serv}`)
+    .then((resp) => resp.json())
+    .then((resp) => (typeof callback === 'function'? callback(resp): null))
+    .catch((error) => (typeof callback === 'function'? callback(error): null)); */
+//   cFetch(`${BaseURL}${serv}`, null, resp => (typeof callback === 'function'? callback(resp): null));
   return cFetch(`${BaseURL}${serv}`);
 };
 
