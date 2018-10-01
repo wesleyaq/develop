@@ -8,7 +8,7 @@
   color: $color-gray-dark;
   border: none;
   border: 1px solid $color-gray;
-  background: none;
+  background: $color-white;
   outline: none;
   // border-radius: 3px;
   &.error {

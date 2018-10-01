@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>I2B Front</title>
+  <title>Documentación | I2B Front</title>
 </head>
-<body>
-  <header class="hd" data-js="hd">
+<body data-page="documentacion">
+  <header class="hd hd-fixed" data-js="hd">
     <div class="container-fluid">
       <div class="row">
         <div class="col-auto">
@@ -21,10 +21,18 @@
   </header>
 
   <main class="main">
-    <section class="container">
-      Index
-      <!-- <div data-js="users"></div> -->
-    </section>
+    <div class="main_left">
+        <div data-js="sec">
+          <input type="text" name="s" data-js"sec">
+        </div>
+        <div data-js="opts" data-class="opts-fixed"></div>
+    </div>
+    
+    <div class="main_right col-auto">
+      <section class="py-20 px-10">
+        Documentación
+      </section>
+    </div>
   </main>
 
   <footer class="ft">

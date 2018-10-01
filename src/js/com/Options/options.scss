@@ -1,0 +1,29 @@
+@import "../../../scss/inc/variables";
+
+.opts {
+    &_items {
+        display: block;
+    }
+
+    &_item {
+        display: block;
+    }
+    
+    &_link {
+        display: block;
+        padding: 8px 13px;
+        font-size: 14px;
+        color: $color-white;
+        outline: 0;
+        text-decoration: none;
+
+        &:hover {
+            background-color: lighten($color-black-light, 30%);
+        }
+    }
+
+    &-fixed {
+        max-height: calc(100vh - 9rem);
+        overflow-y: auto;
+    }
+}

@@ -1,13 +1,21 @@
 // import "@babel/polyfill";
+import { c, isPage } from './shared/Helpers';
 import '../scss/main.scss';
-import Users from './com/Users/Users';
 import Menu from './com/Menu';
-// import style from "../scss/main.scss";
+import Options from './com/Options';
+import SearchAutoComplete from './com/SearchAutoComplete';
+
+var i2b = i2b || {};
 
 document.addEventListener("DOMContentLoaded", function() {
     const menu = new Menu();
     menu.render('menu');
 
-    const users = new Users();
-    users.render('users');
+    if(isPage('documentacion')) {
+        const opts = new Options();
+        opts.render('opts');
+
+        const searchAC = new SearchAutoComplete();
+        searchAC.render('sec');
+    }
 });

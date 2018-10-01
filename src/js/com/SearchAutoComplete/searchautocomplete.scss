@@ -1,0 +1,32 @@
+@import "../../../scss/inc/variables";
+
+.sac {
+    padding: 10px;
+    
+    &_input {
+        width: 100%;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+        &:focus {
+            border-color: $color-red;
+            box-shadow: 0 0 0 3px rgba(236, 0, 0,.25);
+        }
+    }
+
+    &_items {
+        display: block;
+        background-color: $color-white;
+    }
+
+    &_item {
+        padding: 8px;
+        font-size: 13px;
+        color: $color-black;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-white;
+            background-color: lighten($color-black, 50%);
+        }
+    }
+}
